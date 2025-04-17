@@ -13,3 +13,17 @@ word_index = tokenizer.word_index
 print(word_index) # {'i': 1, 'love': 2, 'my': 3, 'dog': 4, 'cat': 5}
 sequences = tokenizer.texts_to_sequences(sentences)
 print(sequences) # [[1, 2, 3, 4], [1, 2, 3, 5]]
+
+tokenizer = Tokenizer(num_words = 2)
+tokenizer.fit_on_texts(sentences)
+word_index = tokenizer.word_index
+print(word_index) # {'i': 1, 'love': 2, 'my': 3, 'dog': 4, 'cat': 5}
+sequences = tokenizer.texts_to_sequences(sentences)
+print(sequences) # [[1], [1]]
+
+tokenizer = Tokenizer(num_words = 3)
+tokenizer.fit_on_texts(sentences)
+word_index = tokenizer.word_index
+print(word_index) # {'i': 1, 'love': 2, 'my': 3, 'dog': 4, 'cat': 5}
+sequences = tokenizer.texts_to_sequences(sentences)
+print(sequences) # [[1, 2], [1, 2]]

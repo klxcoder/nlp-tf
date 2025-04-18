@@ -1,7 +1,16 @@
 # https://www.kaggle.com/datasets/rmisra/news-headlines-dataset-for-sarcasm-detection
 import json
+import tensorflow as tf
+import numpy as np
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+
+vocab_size = 10000
+embedding_dim = 16
+trunc_type='post'
+padding_type='post'
+oov_tok = "<OOV>"
+training_size = 20000
 
 count = 0
 
@@ -61,10 +70,29 @@ training_padded = pad_sequences(training_sequences)
 testing_sequences = tokenizer.texts_to_sequences(testing_sentences)
 testing_padded = pad_sequences(testing_sequences)
 
-print(testing_sequences) # [[1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 3, 4, 1]]
+# print(testing_sequences) # [[1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 3, 4, 1]]
 
-print(testing_padded)
+# print(testing_padded)
 """
 [[0 0 1 1 1 1 1 1 1]
  [1 1 1 1 1 1 3 4 1]]
 """
+
+model = tf.keras.Sequential([
+    tf.keras.layers.Embedding(vocab_size, embedding_dim),
+    tf.keras.layers.GlobalAveragePooling1D(),
+    tf.keras.layers.Dense(24, activation='relu'),
+    tf.keras.layers.Dense(1, activation='sigmoid'),
+])
+
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+num_epochs = 30
+
+history = model.fit(
+    np.array(training_padded),
+    np.array(training_labels),
+    epochs=num_epochs,
+    validation_data=(np.array(testing_padded), np.array(testing_labels)),
+    verbose=2,
+)

@@ -1,0 +1,73 @@
+(base) ┌──(klx㉿kali)-[~/nlp-tf] (main)
+└─$ poetry run python src/17.py
+Epoch 1/30
+625/625 - 1s - 2ms/step - accuracy: 0.6752 - loss: 0.5884 - val_accuracy: 0.8040 - val_loss: 0.4428
+Epoch 2/30
+625/625 - 1s - 1ms/step - accuracy: 0.8472 - loss: 0.3592 - val_accuracy: 0.8264 - val_loss: 0.3850
+Epoch 3/30
+625/625 - 1s - 1ms/step - accuracy: 0.8891 - loss: 0.2769 - val_accuracy: 0.8541 - val_loss: 0.3441
+Epoch 4/30
+625/625 - 1s - 1ms/step - accuracy: 0.9121 - loss: 0.2272 - val_accuracy: 0.8481 - val_loss: 0.3533
+Epoch 5/30
+625/625 - 1s - 1ms/step - accuracy: 0.9254 - loss: 0.1940 - val_accuracy: 0.8521 - val_loss: 0.3594
+Epoch 6/30
+625/625 - 1s - 1ms/step - accuracy: 0.9371 - loss: 0.1664 - val_accuracy: 0.8474 - val_loss: 0.3808
+Epoch 7/30
+625/625 - 1s - 1ms/step - accuracy: 0.9448 - loss: 0.1509 - val_accuracy: 0.8495 - val_loss: 0.3968
+Epoch 8/30
+625/625 - 1s - 1ms/step - accuracy: 0.9513 - loss: 0.1321 - val_accuracy: 0.8466 - val_loss: 0.4258
+Epoch 9/30
+625/625 - 1s - 1ms/step - accuracy: 0.9549 - loss: 0.1237 - val_accuracy: 0.8419 - val_loss: 0.4503
+Epoch 10/30
+625/625 - 1s - 1ms/step - accuracy: 0.9574 - loss: 0.1151 - val_accuracy: 0.8450 - val_loss: 0.4665
+Epoch 11/30
+625/625 - 1s - 1ms/step - accuracy: 0.9660 - loss: 0.0973 - val_accuracy: 0.8375 - val_loss: 0.5048
+Epoch 12/30
+625/625 - 1s - 1ms/step - accuracy: 0.9692 - loss: 0.0909 - val_accuracy: 0.8334 - val_loss: 0.5417
+Epoch 13/30
+625/625 - 1s - 1ms/step - accuracy: 0.9711 - loss: 0.0844 - val_accuracy: 0.8299 - val_loss: 0.5723
+Epoch 14/30
+625/625 - 1s - 1ms/step - accuracy: 0.9736 - loss: 0.0759 - val_accuracy: 0.8261 - val_loss: 0.6141
+Epoch 15/30
+625/625 - 1s - 1ms/step - accuracy: 0.9765 - loss: 0.0683 - val_accuracy: 0.8313 - val_loss: 0.6312
+Epoch 16/30
+625/625 - 1s - 1ms/step - accuracy: 0.9760 - loss: 0.0668 - val_accuracy: 0.8162 - val_loss: 0.6960
+Epoch 17/30
+625/625 - 1s - 1ms/step - accuracy: 0.9786 - loss: 0.0618 - val_accuracy: 0.8192 - val_loss: 0.7566
+Epoch 18/30
+625/625 - 1s - 1ms/step - accuracy: 0.9803 - loss: 0.0573 - val_accuracy: 0.8225 - val_loss: 0.7705
+Epoch 19/30
+625/625 - 1s - 1ms/step - accuracy: 0.9841 - loss: 0.0498 - val_accuracy: 0.8080 - val_loss: 0.9037
+Epoch 20/30
+625/625 - 1s - 1ms/step - accuracy: 0.9847 - loss: 0.0476 - val_accuracy: 0.8186 - val_loss: 0.8544
+Epoch 21/30
+625/625 - 1s - 1ms/step - accuracy: 0.9858 - loss: 0.0427 - val_accuracy: 0.8195 - val_loss: 0.8586
+Epoch 22/30
+625/625 - 1s - 1ms/step - accuracy: 0.9854 - loss: 0.0415 - val_accuracy: 0.8167 - val_loss: 0.8946
+Epoch 23/30
+625/625 - 1s - 1ms/step - accuracy: 0.9862 - loss: 0.0390 - val_accuracy: 0.8146 - val_loss: 0.9316
+Epoch 24/30
+625/625 - 1s - 1ms/step - accuracy: 0.9845 - loss: 0.0429 - val_accuracy: 0.8150 - val_loss: 0.9937
+Epoch 25/30
+625/625 - 1s - 1ms/step - accuracy: 0.9879 - loss: 0.0348 - val_accuracy: 0.8107 - val_loss: 0.9902
+Epoch 26/30
+625/625 - 1s - 1ms/step - accuracy: 0.9900 - loss: 0.0309 - val_accuracy: 0.8089 - val_loss: 1.2196
+Epoch 27/30
+625/625 - 1s - 1ms/step - accuracy: 0.9884 - loss: 0.0348 - val_accuracy: 0.8119 - val_loss: 1.1085
+Epoch 28/30
+625/625 - 1s - 1ms/step - accuracy: 0.9893 - loss: 0.0307 - val_accuracy: 0.8116 - val_loss: 1.0862
+Epoch 29/30
+625/625 - 1s - 1ms/step - accuracy: 0.9905 - loss: 0.0284 - val_accuracy: 0.8119 - val_loss: 1.1241
+Epoch 30/30
+625/625 - 1s - 1ms/step - accuracy: 0.9919 - loss: 0.0255 - val_accuracy: 0.8089 - val_loss: 1.2568
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 39ms/step
+[[0.19753216]
+ [0.0013238 ]]
+
+(base) ┌──(klx㉿kali)-[~/nlp-tf] (main)
+└─$
+
+
+Note:
+"granny starting to fear spiders in the garden might be real" -> 0.19753216????? -> Not OK
+"game of thrones season finale showing this sunday night" -> 0.0013238 -> OK

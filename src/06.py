@@ -18,3 +18,12 @@ print(word_index)
 sequences = tokenizer.texts_to_sequences(sentences)
 print(sequences)
 # [[4, 2, 1, 3], [4, 2, 1, 6], [5, 2, 1, 3], [7, 5, 8, 1, 3, 9, 10]]
+
+test_data = [
+    'i really love my dog',
+    'my dog loves my manatee',
+]
+
+test_sequences = tokenizer.texts_to_sequences(test_data)
+print(test_sequences)
+# [[4, 2, 1, 3], [1, 3, 1]]

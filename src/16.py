@@ -25,7 +25,7 @@ testing_sentences = sentences[training_size:]
 training_labels = labels[0:training_size]
 testing_labels = labels[training_size:]
 
-print(json.dumps(training_sentences, indent=2))
+# print(json.dumps(training_sentences, indent=2))
 """
 [
   "former versace store clerk sues over secret 'black code' for minority shoppers",
@@ -39,7 +39,7 @@ print(json.dumps(training_sentences, indent=2))
 ]
 """
 
-print(json.dumps(testing_sentences, indent=2))
+# print(json.dumps(testing_sentences, indent=2))
 """
 [
   "top snake handler leaves sinking huckabee campaign",
@@ -47,14 +47,24 @@ print(json.dumps(testing_sentences, indent=2))
 ]
 """
 
-print(training_labels) # [0, 0, 1, 1, 0, 0, 0, 0]
+# print(training_labels) # [0, 0, 1, 1, 0, 0, 0, 0]
 
-print(testing_labels) # [1, 0]
+# print(testing_labels) # [1, 0]
 
 tokenizer = Tokenizer(oov_token="<OOV>")
-tokenizer.fit_on_texts(sentences)
+tokenizer.fit_on_texts(training_sentences)
 word_index = tokenizer.word_index
-sequences = tokenizer.texts_to_sequences(sentences)
-padded = pad_sequences(sequences)
-print(padded[0]) # [ 0  0  3  4  5  6  7  8  9 10 11  2 12 13]
-print(padded.shape) # (10, 14)
+
+training_sequences = tokenizer.texts_to_sequences(training_sentences)
+training_padded = pad_sequences(training_sequences)
+
+testing_sequences = tokenizer.texts_to_sequences(testing_sentences)
+testing_padded = pad_sequences(testing_sequences)
+
+print(testing_sequences) # [[1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 3, 4, 1]]
+
+print(testing_padded)
+"""
+[[0 0 1 1 1 1 1 1 1]
+ [1 1 1 1 1 1 3 4 1]]
+"""

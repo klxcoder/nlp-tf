@@ -19,12 +19,12 @@ print(word_index)
 sequences = tokenizer.texts_to_sequences(sentences)
 print(sequences)
 # [[5, 3, 2, 4], [5, 3, 2, 7], [6, 3, 2, 4], [8, 6, 9, 2, 4, 10, 11]]
-padded = pad_sequences(sequences)
+padded = pad_sequences(sequences, padding='post')
 print(padded)
 """
-[[ 0  0  0  5  3  2  4]
- [ 0  0  0  5  3  2  7]
- [ 0  0  0  6  3  2  4]
+[[ 5  3  2  4  0  0  0]
+ [ 5  3  2  7  0  0  0]
+ [ 6  3  2  4  0  0  0]
  [ 8  6  9  2  4 10 11]]
 """
 

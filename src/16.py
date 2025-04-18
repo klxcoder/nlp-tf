@@ -19,14 +19,6 @@ with open('./dataset/Sarcasm_Headlines_Dataset.json', 'r') as f:
         if count==10:
             break
 
-tokenizer = Tokenizer(oov_token="<OOV>")
-tokenizer.fit_on_texts(sentences)
-word_index = tokenizer.word_index
-sequences = tokenizer.texts_to_sequences(sentences)
-padded = pad_sequences(sequences)
-print(padded[0]) # [ 0  0  3  4  5  6  7  8  9 10 11  2 12 13]
-print(padded.shape) # (10, 14)
-
 training_size = 8
 training_sentences = sentences[0:training_size]
 testing_sentences = sentences[training_size:]
@@ -58,3 +50,11 @@ print(json.dumps(testing_sentences, indent=2))
 print(training_labels) # [0, 0, 1, 1, 0, 0, 0, 0]
 
 print(testing_labels) # [1, 0]
+
+tokenizer = Tokenizer(oov_token="<OOV>")
+tokenizer.fit_on_texts(sentences)
+word_index = tokenizer.word_index
+sequences = tokenizer.texts_to_sequences(sentences)
+padded = pad_sequences(sequences)
+print(padded[0]) # [ 0  0  3  4  5  6  7  8  9 10 11  2 12 13]
+print(padded.shape) # (10, 14)

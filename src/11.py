@@ -27,6 +27,8 @@ print(padded)
  [6 3 2 4 0]
  [8 6 9 2 4]]
 """
+# truncating can be 'post'
+# truncating can be 'pre'
 
 test_data = [
     'i really love my dog',

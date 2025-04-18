@@ -1,6 +1,7 @@
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 sentences = [
     'I love my dog',
@@ -18,6 +19,14 @@ print(word_index)
 sequences = tokenizer.texts_to_sequences(sentences)
 print(sequences)
 # [[5, 3, 2, 4], [5, 3, 2, 7], [6, 3, 2, 4], [8, 6, 9, 2, 4, 10, 11]]
+padded = pad_sequences(sequences)
+print(padded)
+"""
+[[ 0  0  0  5  3  2  4]
+ [ 0  0  0  5  3  2  7]
+ [ 0  0  0  6  3  2  4]
+ [ 8  6  9  2  4 10 11]]
+"""
 
 test_data = [
     'i really love my dog',

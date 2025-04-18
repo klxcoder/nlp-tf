@@ -71,3 +71,7 @@ Epoch 30/30
 Note:
 "granny starting to fear spiders in the garden might be real" -> 0.19753216????? -> Not OK
 "game of thrones season finale showing this sunday night" -> 0.0013238 -> OK
+
+Run again, we get:
+[[0.659484  ] -> OK
+ [0.01057369]] -> OK
